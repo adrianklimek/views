@@ -1,0 +1,15 @@
+{
+  "name": "views",
+  "version": "0.1.0",
+  "description": "Views.js is an lightweight image viewer written in vanilla JavaScript",
+  "private": true,
+  "author": "Adrian Klimek",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0"
+  }
+}

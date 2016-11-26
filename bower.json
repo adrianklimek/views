@@ -1,0 +1,25 @@
+{
+  "name": "views",
+  "description": "Views.js is an lightweight image viewer written in vanilla JavaScript",
+  "main": "dist/views.min.js",
+  "authors": [
+    "Adrian Klimek"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/adrianklimek",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "demo/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "^2.0.4"
+  },
+  "devDependencies": {
+    "skeleton": "^2.0.4"
+  }
+}
