@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta http-equiv="cleartype" content="on">
+        <title>Views.js - lightweight vanilla JavaScript image viewer</title>
+        <meta name="description" content="Views.js is an lightweight image viewer written in vanilla JavaScript">
+        <meta name="authors" content="Adrian Klimek">
+        <meta name="theme-color" content="#ff837d">
+    
+        <link rel="stylesheet" href="components/skeleton/css/normalize.css">
+        <link rel="stylesheet" href="components/skeleton/css/skeleton.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/light-theme.css">
+         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+
+        <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <![endif]-->
+    </head>
+    <body> 
+        <a href="https://github.com/adrianklimek/views/" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#ff837d; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+        <div id="content" class="container">
+            <header id="header">
+                <h1 class="title">Views.js</h1>
+                <p class="description secondary-text">An lightweight image viewer written in vanilla JavaScript.</p>
+                <a class="button button-main download-button" href="https://raw.githubusercontent.com/adrianklimek/views/master/dist/views.min.js">Download</a>
+            </header>
+
+            <section id="preview">
+                <a href="images/1.jpg" class="image-trigger"><img src="images/1-min.jpg" alt="Preview Photo 1" class="thumb"></a>
+                <a href="images/2.jpg" class="image-trigger"><img src="images/2-min.jpg" alt="Preview Photo 2" class="thumb"></a>
+                <a href="images/3.jpg" class="image-trigger"><img src="images/3-min.jpg" alt="Preview Photo 3" class="thumb"></a>
+                <a href="images/4.jpg" class="image-trigger"><img src="images/4-min.jpg" alt="Preview Photo 4" class="thumb"></a>
+                <a href="images/5.jpg" class="image-trigger"><img src="images/5-min.jpg" alt="Preview Photo 5" class="thumb"></a>
+                <a href="images/6.jpg" class="image-trigger"><img src="images/6-min.jpg" alt="Preview Photo 6" class="thumb"></a>
+                <a href="images/7.jpg" class="image-trigger"><img src="images/7-min.jpg" alt="Preview Photo 7" class="thumb"></a>
+                <a href="images/8.jpg" class="image-trigger"><img src="images/8-min.jpg" alt="Preview Photo 8" class="thumb"></a>
+                <a href="images/9.jpg" class="image-trigger"><img src="images/9-min.jpg" alt="Preview Photo 9" class="thumb"></a>
+            </section>
+
+            <section id="section-bower" class="section">
+                <h3 class="section-title">Bower installation</h3>
+                <p class="section-description">To install via Bower, simply do the following:</p>
+                <pre><code class="js hljs">$ bower install photosetlayout --save</code></pre>
+            </section>
+
+            <section id="section-usage" class="section">
+                <h3 class="section-title">Usage</h3>
+                <p class="section-description">For default viewer:</p>
+                <pre><code class="js hljs">var viewer = new Views(anyElement);</code></pre>
+                <p class="section-description">If you want to use viewer with custom options:</p>
+                <pre><code class="js hljs">var viewer = new Views(anyElement, {
+    defaultTheme: true,    // If you don't want to use the default viewer theme, disable this option  
+    prefix: '',    // You can add prefix to html ids and classes of the viewer's elements, e.g. if you want to set up multiple viewer instances with different styles
+    loader: '',    // Can be a html or a text, it will be inserted to the loader
+    closeButton: '',   // Can be a html or just a text, it will be inserted to the close button
+    anywhereToClose: true,    // By default you can click anywhere to close viewer
+    openAnimationDuration: 0,    // If you use css animations set this option with opening animation duration in ms (without ms)
+    closeAnimationDuration: 0    // If you use css animations set this option with closing animation duration in ms (without ms)
+});</code></pre>
+            <p class="section-description">Open viewer template looks like this:</p>
+            <pre><code class="html hljs">&lt;div id=&quot;views-wrapper&quot;&gt;
+    &lt;div class=&quot;views-background&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;views-content&quot;&gt;
+        &lt;div id=&quot;views-close&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;views-loader&quot;&gt;&lt;/div&gt;
+        &lt;img class=&quot;views-image&quot; src=&quot;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <p class="section-description">E.g., if you set a <strong>prefix</strong> option to "light" every class or id will be start with "light-" <code>#light-views-wrapper</code></p>
+            <p class="section-description">When viewer is opening "views-opening" class is added to <code>#views-wrapper</code>, and when it's closing "views-closing" is added. </p>
+            <h4>Methods</h4>
+            <pre><code class="js hljs">var viewer = new Views(anyElement);
+viewer.open(); // Open viewer
+viewer.close(); // Close viewer</code></pre>
+            </section>
+
+            <section id="section-support" class="section">
+                <h3 class="section-title">Browser support</h3>
+                <p class="section-description">All modern browsers and <strong>IE10+</strong>. For <strong>IE9</strong> support classList polyfill is needed, for <strong>IE8</strong> support EventTarget polyfill is also needed.</p>
+            </section>
+
+            <section id="section-license" class="section">
+                <h3 class="section-title">License</h3>
+                 <p class="section-description">Views.js is licensed under <a href="https://opensource.org/licenses/MIT">MIT license</a>.</p>
+            </section>
+
+            <footer id="footer" class="section">
+                <p class="section-description">Made by <a href="https://github.io/adrianklimek">Adrian Klimek</a></p>
+            </footer>
+            
+            
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/htmlbars.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/javascript.min.js"></script>
+        <script src="dist/views.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+            var views = [],
+                triggers = document.querySelectorAll('.image-trigger');
+            [].forEach.call(triggers, function(element, index) {
+                views[index] = new Views(element, {
+                    defaultTheme: true,
+                    prefix: 'light',
+                    loader: 'Loading...',
+                    anywhereToClose: true,
+                    openAnimationDuration: 400,
+                    closeAnimationDuration: 400
+                });
+            });
+        </script>
+    </body>
+</html>

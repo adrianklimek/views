@@ -1,0 +1,210 @@
+/* Global */
+a {
+    -webkit-transition: background-color .2s ease-in, border-color .2s ease-in, color .2s ease-in;
+            transition: background-color .2s ease-in, border-color .2s ease-in, color .2s ease-in;
+}
+a {
+  color: #ff837d; 
+}
+a:hover {
+  color: #f74d45; 
+}
+.button.button-main {
+    background-color: #ff837d;
+    border-color: #ff837d;
+    color: #fff;
+}
+.button.button-main:hover {
+    background-color: #f74d45;
+    border-color: #f74d45;
+}
+.button.button-main,
+button.button-main,
+input[type="submit"].button-main,
+input[type="reset"].button-main,
+input[type="button"].button-main {
+  background-color: #ff837d;
+  border-color: #ff837d;
+}
+.button.button-main:hover,
+button.button-main:hover,
+input[type="submit"].button-main:hover,
+input[type="reset"].button-main:hover,
+input[type="button"].button-main:hover,
+.button.button-main:focus,
+button.button-main:focus,
+input[type="submit"].button-main:focus,
+input[type="reset"].button-main:focus,
+input[type="button"].button-main:focus {
+  background-color: #f74d45;
+  border-color: #f74d45;
+}
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #ff837d;
+}
+.secondary-text {
+    color: #999;
+}
+::-moz-selection {
+    background-color: #ff837d;
+    color: #fff;
+}
+::selection {
+    background-color: #ff837d;
+    color: #fff;
+}
+::-moz-selection {
+    background-color: #ff837d;
+    color: #fff;
+}
+/* Header */
+#header {
+    margin: 125px 0;
+    text-align: center;
+}
+.description {
+    margin-bottom: 45px;
+}
+/* Preview */
+.image-trigger {
+    display: block;
+    margin: 0 0 20px;
+    width: 100%;
+    position: relative;
+}
+.thumb {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    -webkit-transition: -webkit-filter .3s ease-in;
+            transition: -webkit-filter .3s ease-in;
+            transition:         filter .3s ease-in;
+            transition:         filter .3s ease-in, -webkit-filter .3s ease-in;
+}
+.thumb:hover {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+}
+
+.section {
+    margin-top: 45px;
+}
+.section-description {
+    color: #999;
+}
+.section a {
+    color: inherit;
+    position: relative;
+    text-decoration: none;
+}
+.section a:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    background-color: #999;
+    width: 100%;
+    height: 1px;
+}
+.section a:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    background-color: #ff837d;
+    width: 0;
+    height: 1px;
+    -webkit-transition: width .2s ease-in;
+            transition: width .2s ease-in;
+}
+.section a:hover:after {
+    width: 100%;
+}
+#footer {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.hljs {
+    padding: 20px !important;
+    margin-bottom: 15px;
+}
+
+/* Github corners By Tim Holman */
+.github-corner:hover .octo-arm {
+    -webkit-animation: octocat-wave 560ms ease-in-out;
+            animation: octocat-wave 560ms ease-in-out;
+}
+@-webkit-keyframes octocat-wave {
+    0%,
+    100% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    20%,
+    60% {
+        -webkit-transform: rotate(-25deg);
+                transform: rotate(-25deg);
+    }
+    40%,
+    80% {
+        -webkit-transform: rotate(10deg);
+                transform: rotate(10deg);
+    }
+}
+@keyframes octocat-wave {
+    0%,
+    100% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    20%,
+    60% {
+        -webkit-transform: rotate(-25deg);
+                transform: rotate(-25deg);
+    }
+    40%,
+    80% {
+        -webkit-transform: rotate(10deg);
+                transform: rotate(10deg);
+    }
+}
+@media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+        -webkit-animation: none;
+                animation: none;
+    }
+    .github-corner .octo-arm {
+        -webkit-animation: octocat-wave 560ms ease-in-out;
+                animation: octocat-wave 560ms ease-in-out;
+    }
+}
+
+@media (min-width: 550px) {
+    #preview {
+        -webkit-column-count: 2;
+           -moz-column-count: 2;
+                column-count: 2;
+        -webkit-column-gap: 20px;
+           -moz-column-gap: 20px;
+                column-gap: 20px;
+    }
+}
+
+@media (min-width: 1000px) {
+    #preview {
+        -webkit-column-count: 3;
+           -moz-column-count: 3;
+                column-count: 3;
+    }
+}
