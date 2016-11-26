@@ -6,8 +6,7 @@
     "Adrian Klimek"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/adrianklimek",
-  "private": true,
+  "homepage": "https://adrianklimek.github.io/views/",
   "ignore": [
     "**/.*",
     "node_modules",

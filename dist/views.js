@@ -2,7 +2,7 @@
  *  views.js - lightweight vanilla JavaScript image viewer
  *  @version 0.1.0
  *  @author Adrian Klimek
- *  @link 
+ *  @link https://adrianklimek.github.io/views/
  *  @license MIT
  */
 
