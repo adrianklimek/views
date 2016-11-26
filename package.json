@@ -1,7 +1,7 @@
 {
   "name": "views",
   "version": "0.1.0",
-  "description": "Views.js is an lightweight image viewer written in vanilla JavaScript",
+  "description": "Views.js is a lightweight image viewer written in vanilla JavaScript",
   "private": true,
   "author": "Adrian Klimek",
   "license": "MIT",
