@@ -4,7 +4,7 @@
 ## Bower installation
 To install via Bower, simply do the following:
 ```
-$ bower install photosetlayout --save
+$ bower install views --save
 ```
 
 ## Usage
