@@ -27,6 +27,9 @@ module.exports = function(grunt) {
         },
         uglify: {
             main: {
+                options: {
+                    preserveComments: /(?:^!|@(?:license|preserve|cc_on))/
+                },
                 files: {
                     'dist/views.min.js': 'src/views.js'
                 }

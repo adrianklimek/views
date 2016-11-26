@@ -1,7 +1,7 @@
 {
   "name": "views",
   "description": "Views.js is a lightweight image viewer written in vanilla JavaScript",
-  "main": "dist/views.min.js",
+  "main": "dist/views.js",
   "authors": [
     "Adrian Klimek"
   ],
