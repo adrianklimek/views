@@ -36,16 +36,16 @@ module.exports = function(grunt) {
             }  
         },
         copy: {
+            main: {
+                expand: true,
+                cwd: 'src/',
+                src: '*.js',
+                dest: 'dist'
+            },
             demo: {
                 expand: true,
                 src: 'dist/*',
                 dest: 'demo/'
-            },
-            main: {
-                expand: true,
-                cwd: 'src/',
-                src: ['views.js'],
-                dest: 'dist/'
             }
         }
     });

@@ -3,6 +3,7 @@
  *  @version 0.1.0
  *  @author Adrian Klimek
  *  @link https://adrianklimek.github.io/views/
+ *  @copyright Adrian Klimek 2016
  *  @license MIT
  */
 
