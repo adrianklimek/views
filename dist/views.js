@@ -246,7 +246,7 @@
     // Custom events 
     Views.prototype.on = function(type, callback) {
         if (typeof callback != 'function') {
-            throw new Error('Views [on]: "callback" parameter is required');
+            console.log('Views [on]: "callback" parameter is required');
         }
         switch(type) {
             case 'open':
@@ -260,7 +260,7 @@
                 };
                 break;
             default:
-                throw new Error('Views [on]: wrong or missing "type" parameter');
+                console.log('Views [on]: wrong or missing "type" parameter');
         }
     };
 
