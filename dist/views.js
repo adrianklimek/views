@@ -250,14 +250,10 @@
         }
         switch(type) {
             case 'open':
-                this.onOpen = function(){
-                    callback();
-                };
+                this.onOpen = callback;
                 break;
             case 'close':
-                this.onClose = function() {
-                    callback();
-                };
+                this.onClose = callback;
                 break;
             default:
                 console.log('Views [on]: wrong or missing "type" parameter');
