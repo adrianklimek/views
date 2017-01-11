@@ -1,8 +1,9 @@
 /*!
  *  views.js - lightweight vanilla JavaScript image viewer
- *  @version 0.1.0
+ *  @version 0.1.1
  *  @author Adrian Klimek
  *  @link https://adrianklimek.github.io/views/
+ *  @copyright Adrian Klimek 2016-2017
  *  @license MIT
  */
 
@@ -70,6 +71,10 @@
     }
 
     Views.prototype.init = function() {
+        // Create empty callbacks
+        this.onOpen = function() {};
+        this.onClose = function() {};
+
         // Css code for default theme
         this.css = {
             view: 'position:fixed;top:0;left:0;width:100%;height:100%;padding:50px 15px;box-sizing:border-box;cursor:pointer;',
@@ -239,18 +244,20 @@
     };
 
     // Custom events 
-    Views.prototype.onOpen = function(fun) {
-        if (typeof fun == 'function') {
-            fun();
+    Views.prototype.on = function(type, callback) {
+        if (typeof callback != 'function') {
+            console.log('Views [on]: "callback" parameter is required');
         }
-        return fun;
-    };
-
-    Views.prototype.onClose = function(fun) {
-        if (typeof fun == 'function') {
-            fun();
+        switch(type) {
+            case 'open':
+                this.onOpen = callback;
+                break;
+            case 'close':
+                this.onClose = callback;
+                break;
+            default:
+                console.log('Views [on]: wrong or missing "type" parameter');
         }
-        return fun;
     };
 
     return Views;
