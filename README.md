@@ -10,12 +10,13 @@ $ bower install views --save
 ## Usage
 For default viewer:
 ```
-var viewer = new Views(anyElement);
+var viewer = new Views(element);
 ```
+element must be an anchor element with the href attribute
 
 If you want to use viewer with custom options:
 ```
-var viewer = new Views(anyElement, {
+var viewer = new Views(element, {
     defaultTheme: true,    // If you don't want to use the default viewer theme, disable this option  
     prefix: '',    // You can add prefix to html ids and classes of the viewer's elements, e.g. if you want to set up multiple viewer instances with different styles
     loader: '',    // Can be a html or a text, it will be inserted to the loader
@@ -26,7 +27,7 @@ var viewer = new Views(anyElement, {
 });
 ```
 
-Open viewer template looks like this:
+Opened viewer template looks like this:
 ```
 <div id="views-wrapper">
     <div class="views-background"></div>
@@ -44,10 +45,18 @@ When viewer is opening "views-opening" class is added to `#views-wrapper`, and w
 
 ### Methods
 ```
-var viewer = new Views(anyElement);
+var viewer = new Views(element);
 viewer.open(); // Open viewer
 viewer.close(); // Close viewer
 ```
+
+### Events
+```
+var viewer = new Views(element);
+viewer.on('open', onOpen);
+viewer.on('close', onClose); 
+```
+
 
 ## Browser support
 All modern browsers and **IE10+**. For **IE9** support classList polyfill is needed, for **IE8** support EventTarget polyfill is also needed.
