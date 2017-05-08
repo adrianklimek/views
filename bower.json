@@ -15,9 +15,6 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "skeleton": "^2.0.4"
-  },
   "devDependencies": {
     "skeleton": "^2.0.4"
   }
