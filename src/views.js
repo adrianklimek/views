@@ -7,19 +7,17 @@
  *  @license MIT
  */
 
-(function(window, factory) {
+(function(root, factory) {
     if (typeof define === 'function' && define.amd) {
-        define(factory(window));
+        define(factory);
     } 
     else if (typeof module === 'object' && module.exports) {
-        module.exports = function(window) {
-            factory(window);
-        };
+        module.exports = factory();
     } 
     else {
-        window.Views = factory(window);
+        root.Views = factory();
     }
-}(window, function (window) {
+}(this, function () {
     'use strict';
 
     // Helpers
