@@ -75,7 +75,7 @@
 
         // Css code for default theme
         this.css = {
-            view: 'position:fixed;top:0;left:0;width:100%;height:100%;padding:50px 15px;box-sizing:border-box;cursor:pointer;',
+            view: 'position:fixed;top:0;left:0;width:100%;height:100%;padding:50px 15px;box-sizing:border-box;cursor:pointer;z-index:9999;',
             image: 'max-width:100%;max-height:100%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);padding:50px 15px;box-sizing:border-box;',
             closeButton: 'width:24px;height:24px;position:absolute;top:11px;right:11px;-webkit-filter:drop-shadow(0 0 12px rgba(0,0,0,.07));filter:drop-shadow(0 0 12px rgba(0,0,0,.07));',
             background: 'position:absolute;top:0;left:0;height:100%;width:100%;opacity:.75;background-color:#000;'
